@@ -371,17 +371,6 @@
         
       
       
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Usage
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -391,52 +380,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#setting-output-property" class="md-nav__link">
-    <span class="md-ellipsis">
-      Setting output property
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#setting-multi-line-output-property" class="md-nav__link">
-    <span class="md-ellipsis">
-      Setting multi-line output property
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#referring-properties-from-successive-steps" class="md-nav__link">
-    <span class="md-ellipsis">
-      Referring properties from successive steps
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
       
     </li>
   
@@ -459,57 +402,6 @@
 
 <h1 id="usage">Usage</h1>
 <hr />
-<p>The z/OS Rexx Executor plug-in will execute statements provided in a dataset or inline in the plugin step.</p>
-<p>Select <strong>Source type</strong> as <strong>DATASET</strong> from the drop-down and 
-enter the dataset in the <strong>Source Value</strong>. 
-Fully qualified dataset needs to be enclosed in single quotes.
-When the quotes are omitted then, the TSO prefix of the id running the 
-plugin step is prefixed to the Source Dataset.</p>
-<p>(or)</p>
-<p>Select <strong>Source type</strong> as <strong>INLINE</strong> from the drop-down and 
-then in the <strong>Source Value</strong> enter REXX statements beginning with a <strong>/* REXX */</strong> statement.</p>
-<p>Arguments can be passed to the REXX program with/without quotes. 
-However, if there are more than one argument then arguments must be separated by a space.</p>
-<p>The <strong>SYSPROC</strong> field allows user to pass datasets containing REXX programs 
-that will be used by the REXX program run by the plugin step. 
-Multiple <strong>SYSPROC</strong> datasets can be passed by separating datasets by a comma(,).</p>
-<h3 id="setting-output-property">Setting output property</h3>
-<p>This plugin allows user to set output properties from the REXX program and 
-later to be used in successive steps of a process. 
-A user REXX program can simply invoke a call to <strong>SETPROP</strong> with two arguments.</p>
-<p>The first argument is output property name and 
-the second argument is the property value.</p>
-<blockquote>
-<p>CALL SETPROP propertyName propertyValue</p>
-</blockquote>
-<p>For example, below REXX snippet will set an output property <strong>currentDate</strong> with value of <strong>date</strong> variable</p>
-<hr />
-<pre><code>/* REXX */
-date = DATE('S')  /* Returns date in YYYYMMDD format E.g., 20120327 */
-CALL SETPROP "currentDate" date
-</code></pre>
-<h3 id="setting-multi-line-output-property">Setting multi-line output property</h3>
-<p>To set a multi-line output property, the lines of the property value must be separated 
-by a delimiter returned by inbuilt program <strong>GETDLMTR</strong> </p>
-<hr />
-<pre><code>/* REXX */
-delimiter = GETDLMTR() /* Return delimiter to separate lines */
-lines = "This is first line" || delimiter || "This is second line"  
-CALL SETPROP "outputLines" lines
-</code></pre>
-<p>Will set property <strong>outputLines</strong> to below value</p>
-<hr />
-<pre><code>This is first line
-This is second line
-</code></pre>
-<h3 id="referring-properties-from-successive-steps">Referring properties from successive steps</h3>
-<p>If the rexx step name is <strong>Run-Rexx-Program</strong> and output property name is <strong>currentDate</strong>
-then the output properties can be referred by the successive steps as below</p>
-<blockquote>
-<p>${p:Run-Rexx-Program/currentDate}</p>
-</blockquote>
-<p><strong>Note</strong></p>
-<p>From plugin version 2, an output property <strong>RexxReturnCode</strong> will store the return/exit code from REXX program.</p>
 
 
 

@@ -390,19 +390,19 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#process-steps-in-the-zos-rexx-executor-plug-in" class="md-nav__link">
+  <a href="#process-steps-in-the-terraform-iaac-plug-in" class="md-nav__link">
     <span class="md-ellipsis">
-      Process steps in the z/OS Rexx Executor plug-in
+      Process steps in the Terraform-IAAC plug-in
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Process steps in the z/OS Rexx Executor plug-in">
+    <nav class="md-nav" aria-label="Process steps in the Terraform-IAAC plug-in">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#execute-a-rexx-program" class="md-nav__link">
+  <a href="#run-terraform-command-aws" class="md-nav__link">
     <span class="md-ellipsis">
-      Execute a REXX program
+      Run Terraform Command (AWS)
     </span>
   </a>
   
@@ -458,8 +458,8 @@
 
 <h1 id="steps">Steps</h1>
 <hr />
-<h2 id="process-steps-in-the-zos-rexx-executor-plug-in">Process steps in the z/OS Rexx Executor plug-in</h2>
-<h3 id="execute-a-rexx-program">Execute a REXX program</h3>
+<h2 id="process-steps-in-the-terraform-iaac-plug-in">Process steps in the Terraform-IAAC plug-in</h2>
+<h3 id="run-terraform-command-aws">Run Terraform Command (AWS)</h3>
 <p>Use this step to execute rexx program</p>
 <table>
 <thead>
@@ -472,27 +472,21 @@
 </thead>
 <tbody>
 <tr>
-<td>Source Type</td>
-<td>Enumeration: INLINE / DATASET</td>
-<td>Source of REXX program</td>
+<td>Terraform File Path</td>
+<td>String</td>
+<td>Full path of the .tf file that contains all configurations needed for a resource creation for any cloud service provider.</td>
 <td>Yes</td>
 </tr>
 <tr>
 <td>Source Value</td>
 <td>String</td>
-<td>Text or PDS member or Sequential Dataset that has REXX program. If the single quotation marks are omitted, the user's data set prefix from the TSO profile is prefixed to the front of the data set name.</td>
+<td>Full path of the terraform installation. Ex: /usr/local/bin/.</td>
 <td>Yes</td>
 </tr>
 <tr>
-<td>Arguments</td>
+<td>AWS Role</td>
 <td>String</td>
-<td>Specify the arguments(without quotes) to the REXX program</td>
-<td>No</td>
-</tr>
-<tr>
-<td>SYSPROC Datasets</td>
-<td>String</td>
-<td>Specify fully qualified SYSPROC datasets that the INPUT REXX program may use</td>
+<td>AWS Role to assume</td>
 <td>No</td>
 </tr>
 </tbody>
