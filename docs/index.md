@@ -24,4 +24,4 @@ No special steps are required for installation. See [Installing plug-ins in Urba
 
 ### Version 0.1
 
-* Initial release of the new Tearraform Plugin
+* Initial release of the new Tearraform Plugin.
