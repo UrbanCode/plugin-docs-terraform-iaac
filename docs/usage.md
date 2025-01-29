@@ -21,13 +21,13 @@ region = "us-east-1"
 resource "aws_instance" "example" {
 ami           = "ami-01816d07b1128cd2d"
 instance_type = "t2.micro"
-subnet_id     = "subnet-0df5b39681b4b5ec9"
+subnet_id     = "subnet-id*******"
 
 tags = {
-Name = "Plugins-4458-img8"
+Name = "instance-name-xyz"
 }
 
 associate_public_ip_address = false
-security_groups = ["sg-013c621e45933e3c2"]
+security_groups = ["sg-id******"]
 }
 ```
