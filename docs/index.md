@@ -2,14 +2,19 @@
 
 ---
 
-The Terraform Plugin can be used to create AWS cloud infrastructures like EC2 instances.
+The IBM DevOps Deploy Plugin for Terraform on AWS is designed to integrate Terraform capabilities with IBM DevOps Deploy.
+
+This enables automated provisioning of AWS cloud resources within an enterprise DevOps pipeline.
+
+This plugin allows you to  deploy AWS infrastructure using Terraform, ensuring consistency, repeatability, and automation in your DevOps workflows.
+
 
 ## Compatibility
 
 The plug-in is compatible with:
 
 * UrbanCode Deploy version 7.0.0 or later
-* IBM Java 8 or 11
+* IBM Java 8 or higher
 
 ## Available Steps
 
@@ -24,4 +29,4 @@ No special steps are required for installation. See [Installing plug-ins in Urba
 
 ### Version 0.1
 
-* Initial release of the new Tearraform Plugin.
+* Initial release of the new Terraform Plugin.
