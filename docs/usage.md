@@ -4,14 +4,11 @@
 You can use the Terraform plug-in to execute any terraform script related to the AWS cloud services.
 
 
-### **Examples**
+### **Example:**
 
 You can use this plug-in to create an EC2 instance.
 
-![Image 1](media/StepTerraform.png)
-
-
-We can have the contents of the EC2.tf file as below
+You can have a terraform script as below that has all the specifications to create an EC2 instance in a file named EC2.tf.
 
 ```
 provider "aws" {
@@ -31,3 +28,19 @@ associate_public_ip_address = false
 security_groups = ["sg-id******"]
 }
 ```
+You need to provide the full path of the script as shown in the image below.
+
+You need to provide the path of the Terraform executable command and the AWS role that is needed to assume.
+
+
+![Image 1](media/StepTerraform.png)
+
+Once the plugin step is run it will automatically assume the AWS role and run the essential Terraform commands 
+which are **_"terraform init"_** and **_"terraform apply "-auto-approve"_** to launch an ec2 instance.
+
+![Image 2](media/StepLog.png)
+
+You can verify if the EC2 instance got created in the AWS console by searching the Tag name **_"instance-name-xyz"_**.
+
+
+
