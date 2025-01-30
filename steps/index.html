@@ -460,7 +460,7 @@
 <hr />
 <h2 id="process-steps-in-the-terraform-iaac-plug-in">Process steps in the Terraform-IAAC plug-in</h2>
 <h3 id="run-terraform-command-aws">Run Terraform Command (AWS)</h3>
-<p>Use this step to execute rexx program</p>
+<p>Use this step to run a terraform script.</p>
 <table>
 <thead>
 <tr>
@@ -472,13 +472,13 @@
 </thead>
 <tbody>
 <tr>
-<td>Terraform File Path</td>
+<td>Terraform Contents</td>
 <td>String</td>
-<td>Full path of the .tf file that contains all configurations needed for a resource creation for any cloud service provider.</td>
+<td>Contents of the .tf file Or Full path of the .tf file that contains all configurations needed for a resource creation for any cloud service provider.</td>
 <td>Yes</td>
 </tr>
 <tr>
-<td>Terraform Installation Path</td>
+<td>Terraform Command</td>
 <td>String</td>
 <td>Full path of the terraform installation. Ex: /usr/local/bin/.</td>
 <td>Yes</td>
@@ -486,7 +486,7 @@
 <tr>
 <td>AWS Role</td>
 <td>String</td>
-<td>AWS Role to assume</td>
+<td>AWS Role to assume.</td>
 <td>No</td>
 </tr>
 </tbody>
