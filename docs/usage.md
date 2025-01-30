@@ -3,6 +3,9 @@
 ---
 You can use the Terraform plug-in to execute any terraform script related to the AWS cloud services.
 
+### **Prerequisites:**
+
+User should have Terraform and AWS CLI installed in their DevOps Deploy Agent's machine.
 
 ### **Example:**
 
