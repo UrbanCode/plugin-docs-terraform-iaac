@@ -36,7 +36,7 @@ You need to provide the path of the Terraform executable command and the AWS rol
 ![Image 1](media/StepTerraform.png)
 
 Once the plugin step is run it will automatically assume the AWS role and run the essential Terraform commands 
-which are **_"terraform init"_** and **_"terraform apply "-auto-approve"_** to launch an ec2 instance.
+which are **_"terraform init"_** and **_"terraform apply -auto-approve"_** to launch an ec2 instance.
 
 ![Image 2](media/StepLog.png)
 
