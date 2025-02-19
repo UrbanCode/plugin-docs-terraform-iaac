@@ -26,7 +26,10 @@ No special steps are required for installation. See [Installing plug-ins in Urba
 
 ## History
 
+### Version 2.1
+
+* Allow Users to run plan and Destroy command for AWS resources
 
 ### Version 0.1
 
-* Initial release of the new Terraform Plugin.
+* Initial release of the new Terraform Plugin. Allow users to create a AWS resources
